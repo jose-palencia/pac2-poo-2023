@@ -76,7 +76,7 @@
     </div>
 </div>*@
 
-<h4>Ejemplo 1: Imagenes en columnas</h4>
+@*<h4>Ejemplo 1: Imagenes en columnas</h4>
 
 <div class="row my-3">
     <div class="col-4">
@@ -89,3 +89,432 @@
         <img class="img-fluid" src="https://picsum.photos/800/800?random=3">
     </div>
 </div>
+
+<h4>Ejemplo 2: Imagenes en columnas verticales</h4>
+
+<div class="row gy-3">
+    <div class="col-sm-4">
+        <img class="img-fluid" src="https://picsum.photos/800/800?random=4">
+    </div>
+    <div class="col-sm-4">
+        <img class="img-fluid" src="https://picsum.photos/800/800?random=5">
+    </div>
+    <div class="col-sm-4">
+        <img class="img-fluid" src="https://picsum.photos/800/800?random=6">
+    </div>
+</div>*@
+
+@*<h4>Manejo de Colores</h4>
+<div class="bg-primary text-white p-3 mb-2">.gb-primary</div>
+<div class="bg-primary bg-gradient text-white p-3 mb-2">.gb-primary</div>
+
+<div class="bg-secondary text-white p-3 mb-2">.gb-secondary</div>
+<div class="bg-secondary bg-gradient text-white p-3 mb-2">.gb-secondary</div>
+
+<div class="bg-success text-white p-3 mb-2">.gb-success</div>
+<div class="bg-success bg-gradient text-white p-3 mb-2">.gb-success</div>
+
+<div class="bg-danger text-white p-3 mb-2">.gb-danger</div>
+<div class="bg-danger bg-gradient text-white p-3 mb-2">.gb-danger</div>
+
+<div class="bg-warning text-white p-3 mb-2">.gb-warning</div>
+<div class="bg-warning bg-gradient text-white p-3 mb-2">.gb-warning</div>
+
+<div class="bg-info text-white p-3 mb-2">.gb-info</div>
+<div class="bg-info bg-gradient text-white p-3 mb-2">.gb-info</div>
+
+<div class="bg-light text-black p-3 mb-2">.gb-light</div>
+<div class="bg-light bg-gradient text-black p-3 mb-2">.gb-light</div>
+
+<div class="bg-dark text-white p-3 mb-2">.gb-dark</div>
+<div class="bg-dark bg-gradient text-white p-3 mb-2">.gb-dark</div>
+
+<div>
+    <button class="btn btn-primary" >Guardar</button>
+</div>*@
+
+@*<h4>Ejemplo de Tabla</h4>
+<table class="table table-striped table-hover  table-bordered table-sm">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Juan</td>
+            <td>Perez</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Maria</td>
+            <td>Mejia</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Carlos</td>
+            <td>Lopez</td>
+        </tr>
+    </tbody>
+</table>*@
+
+@*<h4>Manteniendo el radio de un video</h4>
+<div>Sin radio</div>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/cj0UP-6OMwg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<div class="ratio ratio-16x9">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/cj0UP-6OMwg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>*@
+
+@*<h4>Ejemplo: Tamaños Anchura</h4>
+
+<div class="w-25 bg-primary text-white mb-2">Anchura 25%</div>
+<div class="w-50 bg-primary text-white mb-2">Anchura 50%</div>
+<div class="w-75 bg-primary text-white mb-2">Anchura 75%</div>
+<div class="w-100 bg-primary text-white mb-2">Anchura 100%</div>
+<div class="w-auto bg-primary text-white mb-2">Anchura auto</div>
+
+<h4>Ejemplo: Tamaño Altura</h4>
+<div class="bg-info" style="height: 100px;">
+    <div class="h-25 d-inline-block bg-primary text-white" style="width: 120px;">Altura 25%</div>
+    <div class="h-50 d-inline-block bg-primary text-white my-2" style="width: 120px;">Altura 50%</div>
+    <div class="h-75 d-inline-block bg-primary text-white my-2" style="width: 120px;">Altura 75%</div>
+    <div class="h-100 d-inline-block bg-primary text-white my-2" style="width: 120px;">Altura 100%</div>
+</div>*@
+   
+@*<h4>Toda la pantalla</h4>
+
+<div class="vw-100 bg-success mb-2">Anchura 100vw</div>
+<div class="vh-100 bg-success">Anchura 100vh</div>*@
+
+@*<h4>Ejemplo: Margenes</h4>
+<div class="bg-danger">
+    Linea 1
+</div>
+
+<div class="bg-light m-3">
+    ⭐
+</div>
+
+<div class="bg-danger">
+    Linea 3
+</div>*@
+
+@*
+mt => margen superior
+mb => margen inferior
+ms => margen izquierda, s viene de start
+me => margen derecho, e viende de end
+mx => margen izquierda y derecha
+my => margen inferior y superior
+
+pt => padding superior
+pb => padding inferior
+ps => padding izquierda, s viene de start
+pe => padding derecho, e viende de end
+px => padding izquierda y derecha
+py => padding inferior
+*@
+
+@*<h4>Alineando Texto</h4>
+<p class="text-start">Texto a la izquierda</p>
+<p class="text-center">Texto al centro</p>
+<p class="text-end">Texto a la derecha</p>
+
+<div class="badge bg-primary text-wrap" style="width: 6rem;">
+    Este texto se sale de su contenedor
+</div>
+
+<div class="badge bg-primary text-wrap text-break" style="width: 3rem;">
+    Este texto no se sale de su contenedor
+</div>
+
+<p class="text-lowercase">MINUSCULAS</p>
+<p class="text-uppercase">mayusculas</p>
+<p class="text-capitalize">cada palabra inicia con mayuscula</p>
+
+<h4>Tamaño de Texto</h4>
+<p class="fs-1">.fs-1</p>
+<p class="fs-2">.fs-2</p>
+<p class="fs-3">.fs-3</p>
+<p class="fs-4">.fs-4</p>
+<p class="fs-5">.fs-5</p>
+<p class="fs-6">.fs-6</p>
+
+<h2>Estilo de texto</h2>
+<p class="fw-bold">Negrita</p>
+<p class="fw-bolder">Mas negrita</p>
+<p class="fw-normal">Normal</p>
+
+<p class="fw-light">Texto light</p>
+<p class="fw-lighter">Texto más light</p>
+<p class="fst-italic">Cursiva</p>
+
+<p class="text-decoration-underline">Subrayado</p>
+<p class="text-decoration-line-through"> Texto con una linea en medio</p>
+
+<a href="#">Enlace con decoración</a>
+<a href="#" class="text-decoration-none">Enlace sin decoración</a>*@
+
+@*<h4>Formularios</h4>
+<form>
+    <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" id="email" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label class="form-label" for="descripcion">Descripción</label>
+        <textarea class="form-control" id="descripcion"></textarea>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label" for="color">Color favorito</label>
+        <select class="form-select" id="color">
+            <option selected>Color favorito</option>
+            <option value="1">Azul</option>
+            <option value="2">Rojo</option>
+            <option value="3">Verde</option>
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label" for="emp">Es empleado</label>
+        <input type="checkbox" class="form-check-input" id="emp" />
+    </div>
+
+    <div class="mb-3">
+        <input type="radio" class="form-check-input" name="radioA" value="1" />
+        <label>Opción 1</label>
+    </div>
+    <div class="mb-3">
+        <input type="radio" class="form-check-input" name="radioA" value="2" />
+        <label>Opción 2</label>
+    </div>
+
+    <div class="form-floating mb-3">
+        <input type="email" class="form-control" placeholder="Email" />
+        <label>Email</label>
+    </div>
+
+    <div class="mb-3">
+        <input type="email" class="form-control" disabled />
+    </div>
+
+</form>*@
+
+@*
+<h1>Acordeón</h1>
+<div class="accordion" id="ejemploAccordion">
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+            <button 
+                data-bs-toggle="collapse" 
+                data-bs-target="#elemento1Accordion"
+                class="accordion-button">
+                Elemento 1
+            </button> 
+        </h2>
+        <div id="elemento1Accordion" 
+            class="accordion-collapse collapse show" 
+            data-bs-parent="ejemploAccordion">
+            <div class="accordion-body">
+                Este es el contenido del primero elemento
+            </div>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+            <button data-bs-toggle="collapse"
+                    data-bs-target="#elemento2Accordion"
+                    class="accordion-button">
+                Elemento 2
+            </button>
+        </h2>
+        <div id="elemento2Accordion"
+             class="accordion-collapse collapse"
+             data-bs-parent="ejemploAccordion">
+            <div class="accordion-body">
+                Este es el contenido del segundo elemento
+            </div>
+        </div>
+    </div>
+</div>*@
+
+@*<h4>Alertas</h4>
+<div class="alert alert-primary" role="alert">
+    Alerta primaria
+</div>
+
+<button class="btn btn-primary" onclick="mostrarAlertaExito()">Ver alerta de exito</button>
+<button class="btn btn-danger" onclick="mostrarAlertaError()">Ver alerta de error</button>
+
+<div id="contenedor-alertas">
+    Las alertas se van a mostrar aquí
+</div>
+
+@section Scripts
+{
+    <script>
+
+        function mostrarAlertaExito() {
+            mostrarAlerta('Este es un mensaje exitoso', 'success');
+        }
+
+        function mostrarAlertaError() {
+            mostrarAlerta('Este es un mensaje de error', 'danger');
+        }
+
+        function mostrarAlerta(mensaje, tipo) {
+            const alerta = document.createElement('div');
+            alerta.innerHTML = `
+                <div class="alert alert-${tipo} alert-dismissible fade show" role="alert">
+                    ${mensaje}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            `;
+
+            const contenedorAlertas = document.getElementById('contenedor-alertas');
+            contenedorAlertas.append(alerta);
+        }
+    </script>
+}*@
+
+@*<h2>Carrusel</h2>
+<div id="carouselEjemplo" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img class="d-block w-100" src="https://s3.amazonaws.com/prod-wp-tvcdeportes/wp-content/uploads/2021/02/georgiewlcome_principal-monaco.jpg" />
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100" src="https://eloncehn.com/wp-content/uploads/2019/09/imagen14951.png" />
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100" src="https://diarioroatan.com/wp-content/uploads/2020/09/Eh9xIygWAAAE26H-750x430.jpg" />
+        </div>
+    </div>
+
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselEjemplo" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#carouselEjemplo" data-bs-slide-to="1" ></button>
+        <button type="button" data-bs-target="#carouselEjemplo" data-bs-slide-to="2" ></button>
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselEjemplo" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </button>
+
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselEjemplo" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </button>
+
+</div>*@
+@*
+<h4>Ejemplo Modal</h4>
+
+<button 
+    class="btn btn-primary" 
+    data-bs-toggle="modal" data-bs-target="#ejemploModal">Abrir Modal</button>
+
+<div class="modal fade" id="ejemploModal" tabindex="1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Titulo del Modal</h5>
+                <button 
+                    type="button" 
+                    class="btn btn-close" 
+                    data-bs-toggle="modal" data-bs-target="#ejemploModal"></button>
+            </div>
+            <div class="modal-body">
+                <p>Este es un pequeño formulario</p>
+                <form>
+                    <div class="mb-3">
+                        <label class="form-label" for="email">Correo</label>
+                        <input type="email" id="email" class="form-control"/>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Guardar cambios</button>
+            </div>
+        </div>
+    </div>
+</div>*@
+@*
+<h4>Ejemplo Tabs</h4>
+
+<ul class="nav nav-tabs">
+    <li class="nav-item">
+        <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#tab1">
+            Tab 1
+        </button>
+    </li>
+    <li class="nav-item">
+        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab2">
+            Tab 2
+        </button>
+    </li>
+</ul>
+
+<div class="tab-content">
+    <div id="tab1" class="tab-pane faaccordion-header show active">
+        Conetenido del tab 1
+    </div>
+
+    <div id="tab2" class="tab-pane faaccordion-header">
+        Conetenido del tab 2
+    </div>
+</div>*@
+
+@*<button 
+    class="btn btn-primary" 
+    data-bs-toggle="offcanvas" 
+    data-bs-target="#ejemploOffCanvas">Abrir off canvas</button>
+
+<div class="offcanvas offcanvas-start" tabindex="-1" id="ejemploOffCanvas">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title">Mi App</h5>
+        <button 
+            type="button" 
+            class="btn-close text-reset" 
+            data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+        <div>
+            Contenido del Off Canvas
+        </div>
+    </div>
+</div>*@
+
+
+<button type="button" class="btn btn-primary" onclick="mostrarToast()">Mostar Toast</button>
+
+<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11;">
+    <div id="miToast" class="toast">
+        <div class="toast-header">
+            <strong class="me-auto">Mensaje Enviado</strong>
+            <small>Hace unos instantes</small>
+            <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+        </div>
+        <div class="toast-body">
+            El mensaje fue enviado a Juan Perez.
+        </div>
+    </div>
+</div>
+
+@section Scripts
+{
+    <script>
+        function mostrarToast(){
+            const ejemploToast = document.getElementById("miToast");
+            const toast =  new bootstrap.Toast(ejemploToast);
+            toast.show();
+        }
+    </script>
+}

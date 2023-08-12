@@ -1,0 +1,37 @@
+﻿@model ContactoViewModel
+@{
+    ViewData["Title"] = "Contacto";
+}
+
+<div class="container">
+    <h1>Contacteme</h1>
+    <hr />
+
+    <form asp-action="Contacto">
+        <div class="mb-3">
+            <label asp-for="Nombre" class="form-label"></label>
+            <input 
+                asp-for="Nombre"
+                class="form-control" 
+                placeholder="Ingrese su nombre" />
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Email" class="form-label"></label>
+            <input 
+                type="email" 
+                class="form-control" 
+                asp-for="Email"
+                placeholder="Ingrese su correo electrónico" />
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Mensaje" class="form-label"></label>
+            <textarea class="form-control" asp-for="Mensaje" rows="10"></textarea>
+        </div>
+
+        <div class="mb-3">
+            <button class="btn btn-primary" type="submit">Enviar</button>
+        </div>
+    </form>
+</div>
