@@ -104,3 +104,15 @@ END
 INSERT INTO Cuentas (Nombre, TipoCuentaId, Balance, Descripcion)
 VALUES (@Nombre, @TipoCuentaId, @Balance, @Descripcion);
 SELECT SCOPE_IDENTITY();
+
+
+SELECT 
+	cue.Id,
+	cue.Nombre,
+	cue.Balance,
+	tcue.Nombre AS TipoCuenta
+FROM Cuentas AS cue
+ INNER JOIN TipoCuenta AS tcue
+ ON cue.TipoCuentaId = tcue.Id
+WHERE tcue.UsuarioId = @UsuarioId
+ORDER BY tcue.Orden;

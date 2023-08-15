@@ -27,5 +27,7 @@ namespace ManejoPresupesto.Models
         [StringLength(maximumLength: 100, 
             ErrorMessage = "El {0} debe tener un maximo de {1} letras")]
         public string Descripcion { get; set; }
+
+        public string TipoCuenta { get; set; }
     }
 }
