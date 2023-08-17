@@ -20,7 +20,7 @@ namespace ManejoPresupesto.Models
 
         [DataType(DataType.Currency)]
         [Required(ErrorMessage = "Debe ingresar un numero")]
-        [RegularExpression("^\\d+(\\.\\d{1,2})?$", ErrorMessage = "Solo se permiten numeros en el balance")]
+        [RegularExpression("^-?\\d+(\\.\\d{1,2})?$", ErrorMessage = "Solo se permiten numeros en el balance")]
         public decimal Balance { get; set; }
 
         [Display(Name = "Descripción")]

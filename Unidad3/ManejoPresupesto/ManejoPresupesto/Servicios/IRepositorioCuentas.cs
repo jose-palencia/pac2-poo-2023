@@ -6,5 +6,6 @@ namespace ManejoPresupesto.Servicios
     {
         Task<IEnumerable<Cuenta>> Buscar(int usuarioId);
         Task Crear(Cuenta modelo);
+        Task<Cuenta> ObtenerPorId(int id, int usuarioId);
     }
 }

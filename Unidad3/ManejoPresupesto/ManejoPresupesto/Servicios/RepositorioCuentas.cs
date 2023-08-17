@@ -26,6 +26,26 @@ namespace ManejoPresupesto.Servicios
             modelo.Id = id;
         }
 
+        public async Task<Cuenta> ObtenerPorId(int id, int usuarioId) 
+        {
+            using var connection = new SqlConnection(connectionString);
+
+            return await connection.QueryFirstOrDefaultAsync
+                <Cuenta>
+                (@"
+                    SELECT 
+	                    cu.Id,
+	                    cu.Nombre,
+	                    cu.Balance,
+	                    cu.Descripcion,
+	                    cu.TipoCuentaId
+                    FROM Cuentas cu
+                    INNER JOIN TipoCuenta tc 
+                    ON tc.Id = cu.TipoCuentaId
+                    WHERE tc.UsuarioId = @UsuarioId AND cu.Id = @Id;
+                    ", new { id, usuarioId });
+        }
+
         public async Task<IEnumerable<Cuenta>> Buscar(int usuarioId) 
         {
             using var connection = new SqlConnection(connectionString);

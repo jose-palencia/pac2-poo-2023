@@ -116,3 +116,21 @@ FROM Cuentas AS cue
  ON cue.TipoCuentaId = tcue.Id
 WHERE tcue.UsuarioId = @UsuarioId
 ORDER BY tcue.Orden;
+
+DECLARE @id int = 4;
+DECLARE @UsuarioId int = 1;
+
+SELECT 
+	cu.Id,
+	cu.Nombre,
+	cu.Balance,
+	cu.Descripcion,
+	cu.TipoCuentaId
+FROM Cuentas cu
+INNER JOIN TipoCuenta tc 
+ON tc.Id = cu.TipoCuentaId
+WHERE tc.UsuarioId = @UsuarioId AND cu.Id = @Id;
+
+
+
+SELECT * from Cuentas
