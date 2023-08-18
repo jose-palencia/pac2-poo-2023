@@ -46,6 +46,21 @@ namespace ManejoPresupesto.Servicios
                     ", new { id, usuarioId });
         }
 
+        public async Task Actualizar(CuentaCreacionViewModel modelo) 
+        {
+            using var connection = new SqlConnection(connectionString);
+
+            await connection.ExecuteAsync(
+                @"
+                UPDATE Cuentas
+                SET Nombre = @Nombre,
+	                Balance = @Balance,
+	                Descripcion = @Descripcion,
+	                TipoCuentaId = @TipoCuentaId
+                WHERE Id = @Id;
+                ", modelo);
+        }
+
         public async Task<IEnumerable<Cuenta>> Buscar(int usuarioId) 
         {
             using var connection = new SqlConnection(connectionString);

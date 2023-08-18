@@ -1,4 +1,5 @@
-﻿using ManejoPresupesto.Models;
+﻿using AutoMapper;
+using ManejoPresupesto.Models;
 using ManejoPresupesto.Servicios;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -10,15 +11,18 @@ namespace ManejoPresupesto.Controllers
         private readonly IRepositorioTiposCuenta repositorioTiposCuenta;
         private readonly IServicioUsuarios servicioUsuarios;
         private readonly IRepositorioCuentas repositorioCuentas;
+        private readonly IMapper mapper;
 
         public CuentasController(
             IRepositorioTiposCuenta repositorioTiposCuenta,
             IServicioUsuarios servicioUsuarios,
-            IRepositorioCuentas repositorioCuentas)
+            IRepositorioCuentas repositorioCuentas,
+            IMapper mapper)
         {
             this.repositorioTiposCuenta = repositorioTiposCuenta;
             this.servicioUsuarios = servicioUsuarios;
             this.repositorioCuentas = repositorioCuentas;
+            this.mapper = mapper;
         }
 
         [HttpGet]
@@ -83,18 +87,37 @@ namespace ManejoPresupesto.Controllers
                 return RedirectToAction("NoEncontrado", "Home");
             }
 
-            var modelo = new CuentaCreacionViewModel 
-            {
-                Id = cuenta.Id,
-                Nombre = cuenta.Nombre,
-                TipoCuentaId = cuenta.TipoCuentaId,
-                Descripcion = cuenta.Descripcion,
-                Balance = cuenta.Balance,
-            };
+            var modelo = mapper.Map<CuentaCreacionViewModel>(cuenta);
 
             modelo.TiposCuenta = await ObtenerTiposCuenta(usuarioId);
 
             return View(modelo);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Editar(CuentaCreacionViewModel modelo)
+        {
+            var usuarioId = servicioUsuarios.ObtenerUsuarioId();
+            if (!ModelState.IsValid)
+            {
+                return View(modelo);
+            }
+
+            var cuenta = await repositorioCuentas.ObtenerPorId(modelo.Id, usuarioId);
+            if(cuenta is null) 
+            {
+                return RedirectToAction("NoEncontrado", "Home");
+            }
+
+            var tipoCuenta = await repositorioTiposCuenta
+                .ObtenerPorId(modelo.TipoCuentaId, usuarioId);
+            if (tipoCuenta is null)
+            {
+                return RedirectToAction("NoEncontrado", "Home");
+            }
+
+            await repositorioCuentas.Actualizar(modelo);
+            return RedirectToAction("Index");
         }
 
         private async Task<IEnumerable<SelectListItem>> ObtenerTiposCuenta(int usuarioId) 

@@ -134,3 +134,13 @@ WHERE tc.UsuarioId = @UsuarioId AND cu.Id = @Id;
 
 
 SELECT * from Cuentas
+
+
+-- Editar cuenta
+
+UPDATE Cuentas
+SET Nombre = @Nombre,
+	Balance = @Balance,
+	Descripcion = @Descripcion,
+	TipoCuentaId = @TipoCuentaId
+WHERE Id = @Id;
